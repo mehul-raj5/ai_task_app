@@ -14,7 +14,7 @@ const Header = () => {
               <Brain className="h-6 w-6 text-teal" />
             </div>
             <span className="text-xl font-bold text-midnight-blue">
-              TaskAI Manager
+              IntelliTask
             </span>
           </Link>
 

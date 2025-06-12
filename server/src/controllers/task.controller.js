@@ -131,14 +131,29 @@ export const createTasks = async (req, res) => {
 export const getTasks = async (req, res) => {
   try {
     // Validate query parameters
-    const { sortBy, sortOrder, priority, page, limit } =
+    const {
+      sortBy,
+      sortOrder,
+      priority,
+      status,
+      page,
+      limit,
+    } = // 🔄 UPDATED to get 'status'
       getTasksQuerySchema.parse(req.query);
 
-    // Build filter
+    // Build filter object
     const filter = { createdBy: req.user.userId };
-    if (priority) {
+
+    // Add priority to filter if it exists and is not 'all'
+    if (priority && priority !== "all") {
       filter.priority = priority;
     }
+
+
+    if (status && status !== "all") {
+      filter.status = status;
+    }
+
 
     // Build sort object
     const sort = {};
@@ -153,7 +168,7 @@ export const getTasks = async (req, res) => {
     // Calculate pagination
     const skip = (page - 1) * limit;
 
-    // Get tasks with pagination
+    // Get tasks and total count with the new, correct filter
     const [tasks, totalTasks] = await Promise.all([
       Task.find(filter).sort(sort).skip(skip).limit(limit).lean(),
       Task.countDocuments(filter),

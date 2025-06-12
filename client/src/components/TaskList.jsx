@@ -194,11 +194,7 @@ export default function TaskList({
                         ? "To Do"
                         : "Completed"}
                     </span>
-                    {task.confidence && (
-                      <span className="px-2 py-1 rounded-full text-xs font-medium bg-teal/10 text-teal border border-teal/20">
-                        {Math.round(task.confidence * 100)}% confidence
-                      </span>
-                    )}
+                    
                   </div>
                 </div>
 

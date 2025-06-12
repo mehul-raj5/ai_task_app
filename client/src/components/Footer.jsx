@@ -13,7 +13,7 @@ const Footer = () => {
               <div className="p-2 bg-teal/20 rounded-lg">
                 <Brain className="h-6 w-6 text-teal" />
               </div>
-              <span className="text-xl font-bold">TaskAI Manager</span>
+              <span className="text-xl font-bold">IntelliTask Manager</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
               Transform your natural language into organized, actionable tasks
@@ -22,28 +22,21 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
-                className="text-gray-400 hover:text-teal transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
+                href="https://www.linkedin.com/in/mehul-raj-437326263/"
                 className="text-gray-400 hover:text-teal transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://github.com/mehul-raj5"
                 className="text-gray-400 hover:text-teal transition-colors"
                 aria-label="GitHub"
               >
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="mailto:support@taskai.com"
+                href="mailto:mehul2005raj@gmail.com"
                 className="text-gray-400 hover:text-teal transition-colors"
                 aria-label="Email"
               >
@@ -143,7 +136,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2025 TaskAI Manager. All rights reserved.
+              © 2025 IntelliTask Manager. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a
