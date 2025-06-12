@@ -1,95 +1,92 @@
-# 🤖 AI-Powered Natural Language Task Manager
+# 🤖 IntelliTask: The Smart Task Manager That Understands You
 
-A task management web application that uses **Google's Gemini AI** to convert natural language into structured tasks. Built with the MERN stack.
+Ever feel like you're drowning in meeting notes, emails, and chat messages, trying to figure out who needs to do what? IntelliTask is here to change that.
 
-## ✨ Key Features
+This isn't just another to-do list. It's an intelligent task management application powered by **Google's Gemini AI**. Simply give it your raw, natural language text—like meeting minutes or a project brief—and watch as it automatically identifies, organizes, and assigns actionable tasks.
 
-- 🧠 **Google Gemini AI Integration** - Convert natural language into tasks
-- 🎯 **Intelligent Task Extraction** - Auto-detect tasks, priorities, deadlines, and assignees
-- 📄 **Meeting Minutes to Tasks** - Extract actionable items from meeting notes
-- 🔍 **Smart Context Analysis** - Understand relationships between tasks
-- 💼 **Complete Task Management** - Create, read, update, delete tasks with status tracking
-- 🔒 **Secure Authentication** - JWT-based auth with password hashing
+**Transform your unstructured notes into a perfectly organized workflow, effortlessly.**
 
-## 🛠️ Tech Stack
+---
 
-- **Frontend**: React, Vite, Tailwind CSS, shadcn/ui, Zustand
-- **Backend**: Node.js, Express.js, MongoDB, Mongoose, JWT
-- **AI**: Google Generative AI (Gemini)
+## ✨ Why You'll Love IntelliTask
 
-## ⚙️ Setup Guide
+We built IntelliTask to solve a real problem: the gap between conversation and action. Here’s how it makes your life easier:
+
+- 🧠 **Let AI Do the Heavy Lifting**: Powered by **Google Gemini**, our app intelligently scans your text to pinpoint tasks, deadlines, and who's responsible. Say goodbye to manual entry.
+- 🎯 **From Messy Notes to Clear Tasks**: Paste your meeting minutes or a project plan, and IntelliTask will instantly pull out every actionable item. What was once a wall of text becomes a structured to-do list.
+- 🔍 **Smart Context Recognition**: The AI doesn't just find tasks; it understands them. It correctly assigns priorities and deadlines based on the context of your notes.
+- ✅ **Full-Featured Task Management**: Beyond the AI magic, it’s a robust task manager. Create, update, and track the status of every task from "To-Do" to "Done."
+- 🔒 **Secure and Private**: Your data is protected with secure JWT-based authentication and password hashing, so you can manage your work with peace of mind.
+
+---
+
+## 🛠️ Built With the Best
+
+We chose a modern, powerful tech stack to deliver a seamless and responsive experience.
+
+| Category     | Technology                                        |
+| :----------- | :------------------------------------------------ |
+| **Frontend** | **React**, Vite, Tailwind CSS, shadcn/ui, Zustand |
+| **Backend**  | **Node.js**, Express.js, MongoDB, Mongoose        |
+| **AI**       | **Google Gemini Pro**                             |
+| **Security** | **JSON Web Tokens (JWT)**                         |
+
+---
+
+## 🚀 Get Started in 5 Minutes
+
+Ready to run IntelliTask locally? Here’s how to get it set up.
 
 ### Prerequisites
 
-- Node.js (v18+)
-- MongoDB (local or Atlas)
-- Google Gemini API Key
+- **Node.js** (v18 or higher)
+- **MongoDB** (you can use a [free Atlas cluster](https://www.mongodb.com/cloud/atlas/register) or run it locally)
+- **Google Gemini API Key**
 
-### Installation
+### 1. Clone the Repository
 
-1. **Clone and install dependencies**
+First, grab the code and navigate into the project directory.
+
+> **Note:** For consistency, you may want to rename your GitHub repository to `IntelliTask`.
 
 ```bash
-git clone <repository-url>
-cd natural-language-task-manager
+# Replace the URL with your repository's new URL
+git clone [https://github.com/mehul-raj5/IntelliTask.git](https://github.com/mehul-raj5/IntelliTask.git)
+cd IntelliTask
 
-# Backend setup
+2. Set Up the Backend
+
+# Navigate to the server directory
 cd server
+
+# Install dependencies
 npm install
 
-# Frontend setup
-cd ../client
-npm install
-```
+# Create a .env file and add your keys
+cp .env.example .env
 
-2. **Configure environment**
+Now, open the .env file and fill in your details:
 
-Create `.env` in the `server` and `client` directory:
-
-```Check .env.example file```
-
-```env
-PORT=5000
-NODE_ENV=development
-MONGO_URI=mongodb://localhost:27017/nltm
-JWT_SECRET=your_secret_key_here
+PORT=5001
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=a_super_strong_secret_key
 JWT_EXPIRE=30d
+GEMINI_API_KEY=your_google_gemini_api_key
 
-# Required for AI features
-GEMINI_API_KEY=your_gemini_api_key_here
-```
-
-> **Important**: Get your Gemini API Key from [Google AI Studio](https://aistudio.google.com/app/apikey)
-
-3. **Start application**
-
-```bash
-# Start backend
-cd server
-npm run dev
-
-# Start frontend (new terminal)
+3. Set Up the Frontend
+# Navigate to the client directory from the root
 cd client
+
+# Install dependencies
+npm install
+
+4. Launch the App!
+# In your server terminal
+npm run dev
+
+# In your client terminal
 npm run dev
 ```
-
-Frontend: http://localhost:5173
-Backend: http://localhost:5001
-
-## 🎯 Usage Examples
-
-Try these examples with the AI-powered task extraction:
-
-**Meeting notes example:**
-
-```
-"Sarah needs to update documentation by March 15th. Mike should review the database schema by Thursday."
-```
-
-**AI will extract:**
-
-- Update documentation (Assignee: Sarah, Due: March 15th)
-- Review database schema (Assignee: Mike, Due: Thursday)
 
 ## 📖 Core Functionality
 
@@ -98,32 +95,31 @@ Try these examples with the AI-powered task extraction:
 3. **Task Management**: View, edit, update status of tasks
 4. **Organization**: Tasks get proper context, priorities, and deadlines
 
-
 # Home Page
 
-![IMG-20250530-WA0003](https://github.com/user-attachments/assets/57864b1d-821f-4e48-b4d6-b51e31ae2166)
+![Home Page](images/image.png)
 
 The landing page showcasing the application's AI-powered task management capabilities with a clean, modern interface.
 
-# Register
+# Sign UP
 
-![IMG-20250530-WA0008](https://github.com/user-attachments/assets/db40c58f-2828-4a3f-81c0-08660d7d4751)
+![Sign Up](images/image%20copy.png)
 
 # Login
 
-![IMG-20250530-WA0009](https://github.com/user-attachments/assets/d79863be-dbec-45d7-b0b7-ea4901c5d8cd)
+![Sign In](images/image%20copy%202.png)
 
-# Task Input
-![IMG-20250530-WA0007](https://github.com/user-attachments/assets/6fac4520-8f27-4ad4-9450-dca86f496e4b)
+# Create Task
+
+![Create Task](images/image%20copy%203.png)
 
 Flexible input options - users can either type natural language or upload a text file containing meeting notes or task descriptions.
 
-# Dashbaoard
+# DashBoard
 
-![IMG-20250530-WA0004](https://github.com/user-attachments/assets/130c6cd2-f282-4703-88db-e1b3d8aa585c)
+![DashBoard](images/image%20copy%204.png)
 
 Main task dashboard displaying organized tasks extracted by AI, with status indicators, due dates, and assignee information.
-
 
 ## 🌟 What Makes This Special
 
